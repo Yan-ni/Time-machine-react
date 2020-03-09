@@ -1,9 +1,9 @@
 import React from "react";
 import "./bootstrap.min.css";
-import Counter from "./counter";
 import "./App.css";
+import Counter from "./counter";
 
-class App extends React.Component {
+class Formulaire extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -26,9 +26,12 @@ class App extends React.Component {
   }
 
   handleClick(event) {
-    this.setState({
-      days: Counter(this.state.date_1, this.state.date_2, this.state.haserror)
-    });
+    // console.log("la premiere date est : " + this.state.date_1);
+    // console.log("la deuxieme date est : " + this.state.date_2);
+    // this.setState({ days: 10 });
+
+    this.setState({ days: Counter(this.state.date_1, this.state.date_2) });
+
     event.preventDefault();
   }
 
@@ -59,6 +62,7 @@ class App extends React.Component {
             onClick={this.handleClick}
           />
         </div>
+
         <div>
           <p>number of days</p>
           <h4 className="result">{this.state.days}</h4>
@@ -79,4 +83,4 @@ function todays_date() {
   return today;
 }
 
-export default App;
+export default Formulaire;
