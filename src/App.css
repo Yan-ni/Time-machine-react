@@ -22,11 +22,10 @@ body {
   align-items: center;
 }
 
-.testing {
+.form-container {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-around; */
-  /* align-items: center; */
+  justify-content: space-between;
 }
 
 .result {
@@ -36,4 +35,5 @@ body {
 
 p {
   margin: 0;
+  text-align: center;
 }
